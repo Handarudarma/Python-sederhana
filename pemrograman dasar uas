@@ -1,0 +1,54 @@
+#soal no 1
+# Meminta input dari user
+nilai = int(input("Masukkan nilai: "))
+
+# Menampilkan hasil sesuai dengan rumus yang diberikan
+for i in range(1, nilai+1):
+  print(i**2)
+
+#soal no 2
+# Membuat set balon
+balon = {"hijau", "kuning", "kelabu", "merah muda", "biru"}
+
+# Menghapus balon hijau yang meletus
+balon.remove("hijau")
+
+# Menghitung jumlah balon yang ada di set
+jumlah_balon = len(balon)
+print("Jumlah balon:", jumlah_balon)
+
+# Menambah balon milik adik ke dalam set
+balon.update({"hitam", "putih"})
+
+# Menampilkan semua balon yang ada di set
+print("Balon yang ada di set:", balon)
+
+#soal no 3
+# Fungsi untuk mencetak nama
+def cetak_nama(nama):
+  print("Nama:", nama)
+
+# Fungsi untuk menghitung berat badan ideal
+def hitung_berat_badan_ideal(tinggi_badan):
+  berat_badan_ideal = tinggi_badan - 100
+  return berat_badan_ideal
+
+# Meminta input nama, berat badan, dan tinggi badan dari user
+nama = input("Masukkan nama: ")
+berat_badan = int(input("Masukkan berat badan (kg): "))
+tinggi_badan = int(input("Masukkan tinggi badan (cm): "))
+
+# Mencetak nama
+cetak_nama(nama)
+
+# Menghitung dan menampilkan berat badan ideal
+berat_badan_ideal = hitung_berat_badan_ideal(tinggi_badan)
+print("Berat badan ideal:", berat_badan_ideal, "kg")
+
+# Menentukan hasil pengukuran berat badan ideal
+if berat_badan < berat_badan_ideal:
+  print("Hasil pengukuran: Kurus")
+elif berat_badan == berat_badan_ideal:
+  print("Hasil pengukuran: Normal")
+else:
+  print("Hasil pengukuran: Overweight")
